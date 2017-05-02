@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Tomcat配置]]></title>
+    <url>%2F2017%2F05%2F02%2FTomcat%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[#Tomcat配置1.直接把项目web文件夹放在webapps里。 2.在tomcat\conf\server.xml中的内部添加标签: docBase:项目路径，可以使用绝对路径或相对路径，相对路径是相对于webappspath:访问项目的路径，如：http://127.0.0.1:8080/demo1reloadable:是否自动加载新增或改变的class文件.debug属性与这个Engine关联的Logger记录的调试信息的详细程度。数字越大，输出越详细。如果没有指定，缺省为0。 也就是程序异常时写入日志文件里的详细程度。3、第三种方式和第二种差不多，但是不是在Server.xml文件中添加Context标签，而是在 %tomcat_home%\conf\Catalina\localhost中添加一个XML文件，如:demo1.xml，内容如下： &lt; ?xml version=”1.0” encoding=”UTF-8”?&gt;&lt; Context docBase=”D:\demo1\web” reloadable=”true” /&gt;,只是缺少了path属性，如果你硬写个path=”demo2”的话，是没有用的，tomcat不明确的告诉你：“我不认得”， 这种方式服务器会使用xml文件的名字作为path属性的名字，SO访问地址为：http://localhost:8080/demo1 connectionTimeout指代http的超时时间，当客户端主动断开http链接时，tomcat可以在链接建立20000毫秒时断开。当服务端处理超过20000毫秒时也会主动断开链接。]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>Tomcat</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[可妮宝宝么么哒]]></title>
     <url>%2F2017%2F05%2F02%2F%E5%8F%AF%E5%A6%AE%E5%AE%9D%E5%AE%9D%E4%B9%88%E4%B9%88%E5%93%92%2F</url>
     <content type="text"></content>
