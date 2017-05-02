@@ -108,17 +108,17 @@
 
 
 
-<meta name="description" content="#Tomcat配置1.直接把项目web文件夹放在webapps里。 2.在tomcat\conf\server.xml中的内部添加标签:     docBase:项目路径，可以使用绝对路径或相对路径，相对路径是相对于webappspath:访问项目的路径，如：http://127.0.0.1:8080/demo1reloadable:是否自动加载新增或改变的class文件.debug属性与这个En">
+<meta name="description" content="#Tomcat配置1、直接把项目web文件夹放在webapps里。 2、在tomcat\conf\server.xml中的内部添加标签:    \\ docBase:项目路径，可以使用绝对路径或相对路径，相对路径是相对于 webappspath:访问项目的路径，如：http://127.0.0.1:8080/demo1 reloadable:是否自动加载新增或改变的class文件. debug属性">
 <meta name="keywords" content="Tomcat">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Tomcat配置">
 <meta property="og:url" content="http://yoursite.com/2017/05/02/Tomcat配置/index.html">
 <meta property="og:site_name" content="Sokso WebSite">
-<meta property="og:description" content="#Tomcat配置1.直接把项目web文件夹放在webapps里。 2.在tomcat\conf\server.xml中的内部添加标签:     docBase:项目路径，可以使用绝对路径或相对路径，相对路径是相对于webappspath:访问项目的路径，如：http://127.0.0.1:8080/demo1reloadable:是否自动加载新增或改变的class文件.debug属性与这个En">
-<meta property="og:updated_time" content="2017-05-02T08:52:21.000Z">
+<meta property="og:description" content="#Tomcat配置1、直接把项目web文件夹放在webapps里。 2、在tomcat\conf\server.xml中的内部添加标签:    \\ docBase:项目路径，可以使用绝对路径或相对路径，相对路径是相对于 webappspath:访问项目的路径，如：http://127.0.0.1:8080/demo1 reloadable:是否自动加载新增或改变的class文件. debug属性">
+<meta property="og:updated_time" content="2017-05-02T09:00:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tomcat配置">
-<meta name="twitter:description" content="#Tomcat配置1.直接把项目web文件夹放在webapps里。 2.在tomcat\conf\server.xml中的内部添加标签:     docBase:项目路径，可以使用绝对路径或相对路径，相对路径是相对于webappspath:访问项目的路径，如：http://127.0.0.1:8080/demo1reloadable:是否自动加载新增或改变的class文件.debug属性与这个En">
+<meta name="twitter:description" content="#Tomcat配置1、直接把项目web文件夹放在webapps里。 2、在tomcat\conf\server.xml中的内部添加标签:    \\ docBase:项目路径，可以使用绝对路径或相对路径，相对路径是相对于 webappspath:访问项目的路径，如：http://127.0.0.1:8080/demo1 reloadable:是否自动加载新增或改变的class文件. debug属性">
 
 
 
@@ -374,13 +374,18 @@
       
 
       
-        <p>#Tomcat配置<br>1.直接把项目web文件夹放在webapps里。</p>
-<p>2.在tomcat\conf\server.xml中的<host></host>内部添加<context>标签:<br>    <context debug="0" docbase="D:\demo1\web" path="/demo1" privileged="true" reloadable="true"></context></context></p>
-<p><em>docBase</em>:项目路径，可以使用绝对路径或相对路径，相对路径是相对于<br>webappspath:访问项目的路径，如：<a href="http://127.0.0.1:8080/demo1" target="_blank" rel="external">http://127.0.0.1:8080/demo1</a><br>reloadable:<br>是否自动加载新增或改变的class文件.<br>debug属性与这个Engine关联的Logger记录的调试信息的详细程度。数字越大，输出越详细。如果没有指定，缺省为0。 也就是程序异常时写入日志文件里的详细程度。<br>3<br>、第三种方式和第二种差不多，但是不是在Server.xml文件中添加Context标签，而是在 </p>
-<p>%tomcat_home%\conf\Catalina\localhost<br>中添加一个XML文件，<br>如:demo1.xml，内容如下： </p>
-<p>&lt; ?xml version=”1.0” encoding=”UTF-8”?&gt;<br>&lt; Context docBase=”D:\demo1\web” reloadable=”true” /&gt;<br>,<br>只是缺少了path属性，如果你硬写个path=”demo2”的话，是没有用的，tomcat不明确的告诉你：“我不认得”， </p>
-<p>这种方式服务器会使用xml文件的名字作为path属性的名字，SO访问地址为：<a href="http://localhost:8080/demo1" target="_blank" rel="external">http://localhost:8080/demo1</a></p>
-<p><connector port="8080" protocol="HTTP/1.1" connectiontimeout="20000" redirectport="8443" acceptcount="500" maxthreads="400"><br>connectionTimeout指代http的超时时间，当客户端主动断开http链接时，tomcat可以在链接建立20000毫秒时断开。当服务端处理超过20000毫秒时也会主动断开链接。</connector></p>
+        <p>#Tomcat配置<br>1、直接把项目web文件夹放在webapps里。</p>
+<p>2、在tomcat\conf\server.xml中的<host></host>内部添加<context>标签:<br>    \<context debug="0" docbase="D:\demo1\web" path="/demo1" privileged="true" reloadable="true">\</context></context></p>
+<p><em>docBase</em>:项目路径，可以使用绝对路径或相对路径，相对路径是相对于</p>
+<p><em>webappspath</em>:访问项目的路径，如：<a href="http://127.0.0.1:8080/demo1" target="_blank" rel="external">http://127.0.0.1:8080/demo1</a></p>
+<p><em>reloadable</em>:是否自动加载新增或改变的class文件.</p>
+<p>debug属性与这个Engine关联的Logger记录的调试信息的详细程度。数字越大，输出越详细。如果没有指定，缺省为0。 也就是程序异常时写入日志文件里的详细程度。</p>
+<p>3、第三种方式和第二种差不多，但是不是在Server.xml文件中添加Context标签，而是在 %tomcat_home%\conf\Catalina\localhost中添加一个XML文件，</p>
+<p>如:demo1.xml，内容如下： </p>
+<p>&lt;?xml version=”1.0” encoding=”UTF-8”?&gt;<br>\<context docbase="D:\demo1\web" reloadable="true">\</context></p>
+<p>只是缺少了path属性，如果你硬写个path=”demo2”的话，是没有用的，tomcat不明确的告诉你：“我不认得”， 这种方式服务器会使用xml文件的名字作为path属性的名字，SO访问地址为：<br><a href="http://localhost:8080/demo1" target="_blank" rel="external">http://localhost:8080/demo1</a></p>
+<p>\<connector port="8080" protocol="HTTP/1.1" connectiontimeout="20000" redirectport="8443" acceptcount="500" maxthreads="400">  </connector></p>
+<p>connectionTimeout指代http的超时时间，当客户端主动断开http链接时，tomcat可以在链接建立20000毫秒时断开。当服务端处理超过20000毫秒时也会主动断开链接。</p>
 
       
     </div>
