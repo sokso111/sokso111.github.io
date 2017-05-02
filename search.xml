@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[MarkDown学习]]></title>
+    <url>%2F2017%2F05%2F02%2FMarkDown%E5%AD%A6%E4%B9%A0%2F</url>
+    <content type="text"><![CDATA[一， MarkDown语法的简要规则标题一级标题二级标题三级标题四级标题序列无序列表 1 2 3 有序列表 1 2 3 引用 这里是引用 图片和链接图片为：{ImgCap}{/ImgCap} 链接为： 插入链接baidu 插入图片 粗体与斜体这是斜体这是粗体 我经常去的几个网站Google、Leanote以及自己的博客Leanote 笔记是一个不错的网站。 Markdown: 轻量级文本标记语言，可以转换成html，pdf等格式（左侧有一个可见的冒号和四个不可见的空格） 代码块 2: 这是代码块的定义（左侧有一个可见的冒号和四个不可见的空格） 代码块（左侧有八个不可见的空格） 包含代码区块的引用如果要放代码区块的话，该区块就需要缩进两次， 也就是8个空格或是2个制表符 代码var a="qwerhgbvds" console.log(123)]]></content>
+      <categories>
+        <category>MarkDwon</category>
+      </categories>
+      <tags>
+        <tag>MarkDown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Tomcat配置]]></title>
     <url>%2F2017%2F05%2F02%2FTomcat%E9%85%8D%E7%BD%AE%2F</url>
-    <content type="text"><![CDATA[#Tomcat配置1、直接把项目web文件夹放在webapps里。 2、在tomcat\conf\server.xml中的内部添加标签: \\ docBase:项目路径，可以使用绝对路径或相对路径，相对路径是相对于 webappspath:访问项目的路径，如：http://127.0.0.1:8080/demo1 reloadable:是否自动加载新增或改变的class文件. debug属性与这个Engine关联的Logger记录的调试信息的详细程度。数字越大，输出越详细。如果没有指定，缺省为0。 也就是程序异常时写入日志文件里的详细程度。 3、第三种方式和第二种差不多，但是不是在Server.xml文件中添加Context标签，而是在 %tomcat_home%\conf\Catalina\localhost中添加一个XML文件， 如:demo1.xml，内容如下： &lt;?xml version=”1.0” encoding=”UTF-8”?&gt;\\ 只是缺少了path属性，如果你硬写个path=”demo2”的话，是没有用的，tomcat不明确的告诉你：“我不认得”， 这种方式服务器会使用xml文件的名字作为path属性的名字，SO访问地址为：http://localhost:8080/demo1 \ connectionTimeout指代http的超时时间，当客户端主动断开http链接时，tomcat可以在链接建立20000毫秒时断开。当服务端处理超过20000毫秒时也会主动断开链接。]]></content>
+    <content type="text"><![CDATA[#Tomcat配置1、直接把项目web文件夹放在webapps里。 2、在tomcat\conf\server.xml中的内部添加标签: docBase:项目路径，可以使用绝对路径或相对路径，相对路径是相对于 webappspath:访问项目的路径，如：http://127.0.0.1:8080/demo1 reloadable:是否自动加载新增或改变的class文件. debug属性与这个Engine关联的Logger记录的调试信息的详细程度。数字越大，输出越详细。如果没有指定，缺省为0。 也就是程序异常时写入日志文件里的详细程度。 3、第三种方式和第二种差不多，但是不是在Server.xml文件中添加Context标签，而是在 %tomcat_home%\conf\Catalina\localhost中添加一个XML文件， 如:demo1.xml，内容如下： &lt;?xml version=”1.0” encoding=”UTF-8”?&gt;\\ 只是缺少了path属性，如果你硬写个path=”demo2”的话，是没有用的，tomcat不明确的告诉你：“我不认得”， 这种方式服务器会使用xml文件的名字作为path属性的名字，SO访问地址为：http://localhost:8080/demo1 \ connectionTimeout指代http的超时时间，当客户端主动断开http链接时，tomcat可以在链接建立20000毫秒时断开。当服务端处理超过20000毫秒时也会主动断开链接。]]></content>
       <categories>
         <category>java</category>
       </categories>
