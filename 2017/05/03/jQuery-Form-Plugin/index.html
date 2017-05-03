@@ -92,7 +92,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="ueditor," />
+  <meta name="keywords" content="jQuery," />
 
 
 
@@ -108,17 +108,17 @@
 
 
 
-<meta name="description" content="ueditor图片在线管理不能显示问题：它使用的是tomcat项目中的绝对路径： E:/apache-tomcat-6.0.44/apache-tomcat-6.0.44webapps/⋯⋯ 修改方法修改 dialogs–&amp;gt;image–&amp;gt;路径下的image.js文件 修改image.js文件中 在pushData: function (list) 方法中添加如下代码： var re =">
-<meta name="keywords" content="ueditor">
+<meta name="description" content="文件上传使用jQuery.Form.js上传文件，文件上传域会被自动检测。 因为使用浏览器的XMLHttpRequest对象不能上传文件，表单插件使用了一个隐藏的iframe来完成这个工作。但他有一些限制。这个iframe适当做表单提交的target目标的，也就意味着server返回的响应数据都会被写到这个iframe里。 如果server返回的数据是HTML 或 XML[1]形式的，这是没问题的">
+<meta name="keywords" content="jQuery">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ueditor图片上传配置">
-<meta property="og:url" content="http://yoursite.com/2017/05/03/Ueditor图片上传配置/index.html">
+<meta property="og:title" content="jQuery-Form-Plugin">
+<meta property="og:url" content="http://yoursite.com/2017/05/03/jQuery-Form-Plugin/index.html">
 <meta property="og:site_name" content="Sokso WebSite">
-<meta property="og:description" content="ueditor图片在线管理不能显示问题：它使用的是tomcat项目中的绝对路径： E:/apache-tomcat-6.0.44/apache-tomcat-6.0.44webapps/⋯⋯ 修改方法修改 dialogs–&amp;gt;image–&amp;gt;路径下的image.js文件 修改image.js文件中 在pushData: function (list) 方法中添加如下代码： var re =">
-<meta property="og:updated_time" content="2017-05-03T02:53:17.000Z">
+<meta property="og:description" content="文件上传使用jQuery.Form.js上传文件，文件上传域会被自动检测。 因为使用浏览器的XMLHttpRequest对象不能上传文件，表单插件使用了一个隐藏的iframe来完成这个工作。但他有一些限制。这个iframe适当做表单提交的target目标的，也就意味着server返回的响应数据都会被写到这个iframe里。 如果server返回的数据是HTML 或 XML[1]形式的，这是没问题的">
+<meta property="og:updated_time" content="2017-05-03T09:58:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ueditor图片上传配置">
-<meta name="twitter:description" content="ueditor图片在线管理不能显示问题：它使用的是tomcat项目中的绝对路径： E:/apache-tomcat-6.0.44/apache-tomcat-6.0.44webapps/⋯⋯ 修改方法修改 dialogs–&amp;gt;image–&amp;gt;路径下的image.js文件 修改image.js文件中 在pushData: function (list) 方法中添加如下代码： var re =">
+<meta name="twitter:title" content="jQuery-Form-Plugin">
+<meta name="twitter:description" content="文件上传使用jQuery.Form.js上传文件，文件上传域会被自动检测。 因为使用浏览器的XMLHttpRequest对象不能上传文件，表单插件使用了一个隐藏的iframe来完成这个工作。但他有一些限制。这个iframe适当做表单提交的target目标的，也就意味着server返回的响应数据都会被写到这个iframe里。 如果server返回的数据是HTML 或 XML[1]形式的，这是没问题的">
 
 
 
@@ -146,13 +146,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/05/03/Ueditor图片上传配置/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/05/03/jQuery-Form-Plugin/"/>
 
 
 
 
 
-  <title>Ueditor图片上传配置 | Sokso WebSite</title>
+  <title>jQuery-Form-Plugin | Sokso WebSite</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -281,7 +281,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/03/Ueditor图片上传配置/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/03/jQuery-Form-Plugin/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Myl">
@@ -302,7 +302,7 @@
             
             
               
-                Ueditor图片上传配置
+                jQuery-Form-Plugin
               
             
           </h1>
@@ -317,7 +317,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-03T10:04:51+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-03T17:52:28+08:00">
                 2017-05-03
               </time>
             
@@ -352,15 +352,10 @@
       
 
       
-        <h4 id="ueditor图片在线管理不能显示问题："><a href="#ueditor图片在线管理不能显示问题：" class="headerlink" title="ueditor图片在线管理不能显示问题："></a>ueditor图片在线管理不能显示问题：</h4><p>它使用的是tomcat项目中的绝对路径：</p>
-<pre><code>E:/apache-tomcat-6.0.44/apache-tomcat-6.0.44webapps/⋯⋯
-</code></pre><h4 id="修改方法"><a href="#修改方法" class="headerlink" title="修改方法"></a>修改方法</h4><p>修改 dialogs–&gt;image–&gt;路径下的image.js文件</p>
-<p>修改image.js文件中 在pushData: function (list) 方法中添加如下代码：</p>
-<pre><code>var re = /([a-zA-Z]{1}\:.*webapps)/;
-var newUrl list[i].url.replace(re.exec(list[i].url)[1],&quot;&quot;);
-</code></pre><p>将代码中的list[i].url替换为newUrl：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">img.setAttribute(<span class="string">'src'</span>, urlPrefix + newUrl + (newUrl.indexOf(<span class="string">'?'</span>) == <span class="number">-1</span> ? <span class="string">'?noCache='</span>:<span class="string">'&amp;noCache='</span>) +(+<span class="keyword">new</span> <span class="built_in">Date</span>()).toString(<span class="number">36</span>) );img.setAttribute(<span class="string">'_src'</span>, urlPrefix + newUrl);</div></pre></td></tr></table></figure>
-
+        <h3 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h3><p>使用jQuery.Form.js上传文件，文件上传域会被自动检测。</p>
+<p>因为使用浏览器的XMLHttpRequest对象不能上传文件，表单插件使用了一个隐藏的iframe来完成这个工作。但他有一些限制。这个iframe适当做表单提交的target目标的，也就意味着server返回的响应数据都会被写到这个iframe里。 如果server返回的数据是HTML 或 XML[1]形式的，这是没问题的，但当返回的数据类型是 script 或 JSON 时, 这两种形式的数据一般都需要处理一下然后利用页面上一些HTML代码来重新展示。</p>
+<p>考虑到处理 script 和 JSON 类响应的困难，这个插件允许你把这些响应代码嵌入到 textarea 元素里而且我们推荐当表单中有上传域时你使用这种方法’ 然而，请注意, 如果这个上传域里没有提供值，那么表单将会按常规的 XHR 方式提交(不使用iframe)。这就需要server端代码去判断何时使用textarea，何时不使用textarea。如果你喜欢，你可以一直按iframe方式处理。 插件有个选项可以使它强制一直使用 iframe 模式 而你的server端代码就可以一直使用在textarea里嵌入响应代码的形式。 下面的就是一个从server端返回的一个script代码的示例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;textarea&gt;</div><div class="line">  		<span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</div><div class="line">      <span class="comment">// do some processing</span></div><div class="line">   	&#125;</div><div class="line">&lt;<span class="regexp">/textarea&gt;</span></div></pre></td></tr></table></figure>
       
     </div>
 
@@ -389,7 +384,7 @@ var newUrl list[i].url.replace(re.exec(list[i].url)[1],&quot;&quot;);
       
         <div class="post-tags">
           
-            <a href="/tags/ueditor/" rel="tag"># ueditor</a>
+            <a href="/tags/jQuery/" rel="tag"># jQuery</a>
           
         </div>
       
@@ -402,8 +397,8 @@ var newUrl list[i].url.replace(re.exec(list[i].url)[1],&quot;&quot;);
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/02/MarkDown学习/" rel="next" title="MarkDown学习">
-                <i class="fa fa-chevron-left"></i> MarkDown学习
+              <a href="/2017/05/03/使用虚拟路径映射配置/" rel="next" title="使用虚拟路径映射配置">
+                <i class="fa fa-chevron-left"></i> 使用虚拟路径映射配置
               </a>
             
           </div>
@@ -411,10 +406,6 @@ var newUrl list[i].url.replace(re.exec(list[i].url)[1],&quot;&quot;);
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/03/使用虚拟路径映射配置/" rel="prev" title="使用虚拟路径映射配置">
-                使用虚拟路径映射配置 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -554,7 +545,7 @@ var newUrl list[i].url.replace(re.exec(list[i].url)[1],&quot;&quot;);
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#ueditor图片在线管理不能显示问题："><span class="nav-number">1.</span> <span class="nav-text">ueditor图片在线管理不能显示问题：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改方法"><span class="nav-number">2.</span> <span class="nav-text">修改方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#文件上传"><span class="nav-number">1.</span> <span class="nav-text">文件上传</span></a></li></ol></div>
             
 
           </div>
