@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Ueditor图片上传配置]]></title>
+    <url>%2F2017%2F05%2F03%2FUeditor%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0%E9%85%8D%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[ueditor图片在线管理不能显示问题：它使用的是tomcat项目中的绝对路径： E:/apache-tomcat-6.0.44/apache-tomcat-6.0.44webapps/⋯⋯ 修改方法修改 dialogs–&gt;image–&gt;路径下的image.js文件 修改image.js文件中 在pushData: function (list) 方法中添加如下代码： var re = /([a-zA-Z]{1}\:.*webapps)/; var newUrl list[i].url.replace(re.exec(list[i].url)[1],&quot;&quot;); 将代码中的list[i].url替换为newUrl： 1img.setAttribute('src', urlPrefix + newUrl + (newUrl.indexOf('?') == -1 ? '?noCache=':'&amp;noCache=') +(+new Date()).toString(36) ); img.setAttribute('_src', urlPrefix + newUrl);]]></content>
+      <tags>
+        <tag>ueditor</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[MarkDown学习]]></title>
     <url>%2F2017%2F05%2F02%2FMarkDown%E5%AD%A6%E4%B9%A0%2F</url>
     <content type="text"><![CDATA[一， MarkDown语法的简要规则标题一级标题二级标题三级标题四级标题序列无序列表 1 2 3 有序列表 1 2 3 引用 这里是引用 图片和链接图片为：{ImgCap}{/ImgCap} 链接为： 插入链接baidu 插入图片 粗体与斜体这是斜体这是粗体 我经常去的几个网站Google、Leanote以及自己的博客Leanote 笔记是一个不错的网站。 Markdown: 轻量级文本标记语言，可以转换成html，pdf等格式（左侧有一个可见的冒号和四个不可见的空格） 代码块 2: 这是代码块的定义（左侧有一个可见的冒号和四个不可见的空格） 代码块（左侧有八个不可见的空格） 包含代码区块的引用如果要放代码区块的话，该区块就需要缩进两次， 也就是8个空格或是2个制表符 代码var a="qwerhgbvds" console.log(123)]]></content>
