@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[SpringBoot自定义porperties]]></title>
+    <url>%2F2017%2F05%2F04%2FSpringBoot%E8%87%AA%E5%AE%9A%E4%B9%89porperties%2F</url>
+    <content type="text"><![CDATA[自定义SpringBoot的Porperties文件方法一 在Resource下面新建文件My.porperties文件 12//添加配置信息my.name=zhangsan 新建实体类 1234567@ConfigurationProperties(prefix="my",locations="classpath:文件路径"）//使用注解可以将类注入到bean@Compoentpublic class MySettings &#123; private String name; public String getName() &#123; return name; &#125; public void setName(String name) &#123; this.name = name; &#125; 使用自定义配置文件12345678@Autowiredprivate MySettings mySettings;public void test() &#123; //可以读取配置文件中信息 String name = mySettings.getName();&#125; 方法二待续……………………]]></content>
+      <tags>
+        <tag>SpringBoot</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[jQuery-Form-Plugin]]></title>
     <url>%2F2017%2F05%2F03%2FjQuery-Form-Plugin%2F</url>
     <content type="text"><![CDATA[文件上传使用jQuery.Form.js上传文件，文件上传域会被自动检测。 因为使用浏览器的XMLHttpRequest对象不能上传文件，表单插件使用了一个隐藏的iframe来完成这个工作。但他有一些限制。这个iframe适当做表单提交的target目标的，也就意味着server返回的响应数据都会被写到这个iframe里。 如果server返回的数据是HTML 或 XML[1]形式的，这是没问题的，但当返回的数据类型是 script 或 JSON 时, 这两种形式的数据一般都需要处理一下然后利用页面上一些HTML代码来重新展示。 考虑到处理 script 和 JSON 类响应的困难，这个插件允许你把这些响应代码嵌入到 textarea 元素里而且我们推荐当表单中有上传域时你使用这种方法’ 然而，请注意, 如果这个上传域里没有提供值，那么表单将会按常规的 XHR 方式提交(不使用iframe)。这就需要server端代码去判断何时使用textarea，何时不使用textarea。如果你喜欢，你可以一直按iframe方式处理。 插件有个选项可以使它强制一直使用 iframe 模式 而你的server端代码就可以一直使用在textarea里嵌入响应代码的形式。 下面的就是一个从server端返回的一个script代码的示例： 123456&lt;textarea&gt; for (var i=0; i &lt; 10; i++) &#123; // do some processing &#125;&lt;/textarea&gt;]]></content>
